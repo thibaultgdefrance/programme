@@ -5,7 +5,7 @@ Activité : jeu de devinette
 // NE PAS MODIFIER OU SUPPRIMER LES LIGNES CI-DESSOUS
 // COMPLETEZ LE PROGRAMME UNIQUEMENT APRES LE TODO
     var parties=1;
-    while (parties < 10){
+    while (parties <= 10){
         alert("Bienvenue dans ce jeu de devinette !");
 
         // Cette ligne génère aléatoirement un nombre entre 1 et 100
