@@ -1,41 +1,29 @@
-/*
-Activité : jeu de devinette
-*/
 
-// NE PAS MODIFIER OU SUPPRIMER LES LIGNES CI-DESSOUS
-// COMPLETEZ LE PROGRAMME UNIQUEMENT APRES LE TODO
-    var parties=1;
-    while (parties <= 10){
-        alert("Bienvenue dans ce jeu de devinette !");
+var parties=1;
+while (parties <= 10){
+	alert("Bienvenue dans ce jeu de devinette !");
+	var solution = Math.floor(Math.random() * 100) + 1;
+	var essai = 1;
+	while ((essai <= 6) && (choix !== solution)) {
+		console.log("Fin du programme");
+		var choix =Number(prompt("choisissez un nombre entre 1 et 100"));
+		if (choix < solution){
+			alert("c'est plus");
+		}
+		else if(choix > solution){
+			alert("c'est moin");
+		}
+		else{
+			alert("gagné");
+		}
+		essai++;
+		}
+		if((essai >6) && (choix !== solution)){
+			alert("perdu");
+		}
+		alert("on recommence");
+		parties++;
+	}	
+alert("vous n'avez plus de parties");
+	
 
-        // Cette ligne génère aléatoirement un nombre entre 1 et 100
-        var solution = Math.floor(Math.random() * 100) + 1;
-
-        // Décommentez temporairement cette ligne pour mieux vérifier le programme
-        //console.log("(La solution est " + solution + ")");
-
-        // TODO : complétez le programme
-        var essai = 1;
-        while ((essai <= 6) && (choix !== solution)) {
-
-            console.log("Fin du programme");
-            var choix =Number(prompt("choisissez un nombre entre 1 et 100"));
-                if (choix < solution){
-                    alert("c'est plus");
-            }
-            else if(choix > solution){
-                alert("c'est moin");
-            }
-            else{
-                alert("gagné");
-            }
-            alert("encore?")
-            essai++;
-        }
-        if((essai >6) && (choix !== solution)){
-        alert("perdu");
-        }
-        alert("on recommence");
-    parties++;
-}
-alert("vous n'avez plus de parties")
