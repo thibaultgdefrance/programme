@@ -1,6 +1,6 @@
 
 var parties=1;
-while (parties <= 10){
+while (parties <= 5){
 	alert("Bienvenue dans ce jeu de devinette !");
 	var solution = Math.floor(Math.random() * 100) + 1;
 	var essai = 1;
@@ -23,7 +23,5 @@ while (parties <= 10){
 		}
 		alert("on recommence");
 		parties++;
-	}	
+	}
 alert("vous n'avez plus de parties");
-	
-
